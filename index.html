@@ -102,9 +102,13 @@
     </nav>
 
     <section id="hero" class="w-11/12 mx-auto">
-      <div class="flex justify-between items-center flex-col-reverse md:flex-row">
+      <div
+        class="flex justify-between items-center flex-col-reverse md:flex-row"
+      >
         <div id="left" class="flex-1">
-          <h1 class="text-5xl font-bold"><span class="text-sky-500">English</span> is Easy</h1>
+          <h1 class="text-5xl font-bold">
+            <span class="text-sky-500">English</span> is Easy
+          </h1>
           <p class="bn-font text-xl my-10 w-[70%]">
             আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
             আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
@@ -112,10 +116,30 @@
           </p>
         </div>
         <div id="right" class="flex-1">
-            <img src="./assets/hero-student.png" alt="">
-
+          <img src="./assets/hero-student.png" alt="" />
         </div>
       </div>
+    </section>
+
+<!--  lession-container -->
+    <section class="text-center">
+      <h1 class="text-5xl font-bold text-center">
+        <span class="text-sky-500">Let's</span> Learn Vocabularies
+      </h1>
+      <div
+        id="lession-container"
+        class="my-10 flex justify-center flex-wrap gap-5"
+      ></div>
+    </section>
+
+<!-- lession-Words Show Container -->
+    <section id="words-container" 
+    class="w-11/12 mx-auto grid grid-cols-3 gap-5 bn-font bg-gray-100 p-10 my-10">
+        <div class="text-center col-span-3 space-y-3">
+          <p class="text-3xl font-bold">আপনি এখনো কোন Lession Select করেন নি</p>
+          <p class="text-2xl font-semibold">একটি Lession Select করুন</p>
+          
+        </div>
     </section>
     <script src="./js/script.js"></script>
   </body>
