@@ -2,6 +2,19 @@ const synonymSpan = (arr) => {
   const synName = arr.map((synonym) => `<span class="btn">${synonym}</span>`);
   return synName.join(" ");
 };
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-GB"; // English
+  window.speechSynthesis.speak(utterance);
+}
+
+function pronounceWordUs(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-Us"; // English
+  window.speechSynthesis.speak(utterance);
+}
+
+
 const loading = (status) => {
   if (status === true) {
     document.getElementById("loading").classList.remove("hidden");
@@ -84,8 +97,12 @@ const wordsDetailShow = (data) => {
                 word.id
               })" class="bg-gray-100 p-3 rounded-md">
               <i class="fa-solid fa-circle-info"></i></span>
-              <span class="bg-gray-100 p-3 rounded-md">
+              <div>
+              <span onclick="pronounceWord('${word.word}')" class="bg-gray-100 p-3 rounded-md">
               <i class="fa-solid fa-volume-high"></i></span>
+              <span onclick="pronounceWordUs('${word.word}')" class="bg-gray-100 p-3 rounded-md">
+              <i class="fa-solid fa-volume-high"></i></span>
+              </div>
             </div>
         </div>
        `;
@@ -163,6 +180,7 @@ const displaySingleWordDetails = (word) => {
 };
 
 document.getElementById("searchBtn").addEventListener("click", () => {
+  removeActive();
   const userInput = document.getElementById("userInput").value;
   const searchValue = userInput.trim().toLowerCase();
   console.log(searchValue);
