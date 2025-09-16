@@ -32,8 +32,8 @@
     />
   </head>
   <body>
-    <nav class="">
-      <div class="navbar bg-base-100 shadow-sm">
+    <nav class="bg-base-100 shadow-sm">
+      <div class="navbar max-w-[1440px] mx-auto">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -101,7 +101,7 @@
       </div>
     </nav>
 
-    <section id="hero" class="w-11/12 mx-auto">
+    <section id="hero" class="max-w-[1440px] mx-auto">
       <div
         class="flex justify-between items-center flex-col-reverse md:flex-row"
       >
@@ -109,7 +109,9 @@
           <h1 class="text-3xl md:text-5xl font-bold">
             <span class="text-sky-500">English</span> is Easy
           </h1>
-          <p class="bn-font text-lg md:text-xl my-10 md:w-[70%] mx-auto md:ml-0">
+          <p
+            class="bn-font text-lg md:text-xl my-10 md:w-[70%] mx-auto md:ml-0"
+          >
             আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
             আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
             অন্য একটি Level এ
@@ -132,26 +134,35 @@
       ></div>
     </section>
     <!-- Search bar -->
-     <div class="join w-11/12 mx-auto flex justify-center">
-  <div class="">
-    <label class="input validator join-item">
-      <input id="userInput" type="text" placeholder="Write here..." required />
-    </label>
-  </div>
-  <button id="searchBtn" class="btn btn-neutral join-item">Search</button>
-</div>
-<!-- loading icon -->
+    <div class="join max-w-[1440px] mx-auto flex justify-center">
+      <div class="">
+        <label class="input validator join-item">
+          <input
+            id="userInput"
+            type="text"
+            placeholder="Write here..."
+            required
+          />
+        </label>
+      </div>
+      <button id="searchBtn" class="btn btn-neutral join-item">Search</button>
+    </div>
+    <!-- loading icon -->
     <section id="loading" class="flex items-center justify-center hidden">
       <span class="loading loading-bars loading-xl"></span>
     </section>
     <!-- lession-Words Show Container -->
     <section
       id="words-container"
-      class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 bn-font bg-gray-100 p-10 my-10"
+      class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 bn-font bg-gray-100 p-10 my-10"
     >
       <div class="text-center col-span-3 space-y-3">
-        <p class="text-xl md:text-3xl font-bold">আপনি এখনো কোন Lession Select করেন নি</p>
-        <p class="text-lg md:text-2xl font-semibold">একটি Lession Select করুন</p>
+        <p class="text-xl md:text-3xl font-bold">
+          আপনি এখনো কোন Lession Select করেন নি
+        </p>
+        <p class="text-lg md:text-2xl font-semibold">
+          একটি Lession Select করুন
+        </p>
       </div>
     </section>
 
@@ -161,9 +172,7 @@
       <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
       <dialog id="modal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
-          <div id="detailsBox" class="space-y-5">
-            
-          </div>
+          <div id="detailsBox" class="space-y-5"></div>
           <div class="modal-action">
             <form method="dialog">
               <!-- if there is a button in form, it will close the modal -->
